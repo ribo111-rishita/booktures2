@@ -1,0 +1,89 @@
+.app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: var(--bg-primary);
+  position: relative;
+}
+
+.app-header {
+  text-align: center;
+  padding: 60px 20px 40px;
+  background: var(--bg-secondary);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+.app-title {
+  font-family: 'Press Start 2P', cursive;
+  font-size: 48px;
+  font-weight: bold;
+  color: var(--accent-green);
+  text-shadow:
+    0 0 10px rgba(0, 255, 136, 0.5),
+    0 0 20px rgba(0, 255, 136, 0.3),
+    0 0 30px rgba(0, 255, 136, 0.2);
+  margin-bottom: 20px;
+  letter-spacing: 2px;
+  animation: glow 2s ease-in-out infinite alternate;
+}
+
+@keyframes glow {
+  from {
+    text-shadow:
+      0 0 10px rgba(0, 255, 136, 0.5),
+      0 0 20px rgba(0, 255, 136, 0.3),
+      0 0 30px rgba(0, 255, 136, 0.2);
+  }
+
+  to {
+    text-shadow:
+      0 0 20px rgba(0, 255, 136, 0.8),
+      0 0 30px rgba(0, 255, 136, 0.5),
+      0 0 40px rgba(0, 255, 136, 0.3);
+  }
+}
+
+.app-subtitle {
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  color: var(--text-secondary);
+  font-style: italic;
+}
+
+.app-footer {
+  text-align: center;
+  padding: 20px;
+  font-size: 14px;
+  color: var(--text-secondary);
+  background: var(--bg-secondary);
+  border-top: 1px solid rgba(0, 255, 136, 0.2);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .app-title {
+    font-size: 32px;
+  }
+
+  .app-subtitle {
+    font-size: 14px;
+  }
+
+  .app-header {
+    padding: 40px 20px 30px;
+  }
+
+  .app-main {
+    padding: 20px 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .app-title {
+    font-size: 24px;
+  }
+
+  .app-subtitle {
+    font-size: 12px;
+  }
+}
