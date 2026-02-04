@@ -4,6 +4,8 @@ import ThemeToggle from './components/ThemeToggle';
 import UploadPage from './pages/UploadPage';
 import ReaderPage from './pages/ReaderPage';
 import './App.css';
+import themeImage from './assets/theme.png';
+import headerImage from './assets/header_theme.png';
 
 function App() {
   const [theme, setTheme] = useState('dark');
@@ -20,7 +22,7 @@ function App() {
     <div className="app">
       <ThemeToggle theme={theme} toggleTheme={toggleTheme} />
 
-      <header className="app-header">
+      <header className="app-header" style={{ backgroundImage: `url(${headerImage})` }}>
         <h1 className="app-title">BOOKTURES</h1>
         <p className="app-subtitle">Where stories come alive</p>
       </header>
@@ -30,7 +32,7 @@ function App() {
         <Route path="/reader" element={<ReaderPage />} />
       </Routes>
 
-      <footer className="app-footer">
+      <footer className="app-footer" style={{ backgroundImage: `url(${themeImage})` }}>
         <p>Flip through the pages to experience the story</p>
       </footer>
     </div>
