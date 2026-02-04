@@ -23,7 +23,10 @@ const FlipBook = ({ pages }) => {
                 ref={bookRef}
             >
                 {pages.map((pageData) => (
-                    <Page key={pageData.id} pageData={pageData} />
+                    <Page
+                        key={pageData.id}
+                        pageData={pageData}
+                    />
                 ))}
             </HTMLFlipBook>
 

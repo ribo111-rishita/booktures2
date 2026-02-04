@@ -216,12 +216,13 @@ export function formatPagesForFlipBook(textPages) {
             chapter: pageData.chapter
         });
 
-        // Add image placeholder (right page)
+        // Add image placeholder (right page) with text reference for AI generation
         flipBookPages.push({
             id: pageId++,
             type: 'image',
             content: null,
-            chapter: pageData.chapter
+            chapter: pageData.chapter,
+            textForPrompt: pageData.content // Text to base image generation on
         });
     }
 
